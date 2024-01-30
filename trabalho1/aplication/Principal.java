@@ -1,6 +1,6 @@
-package aplication;
+package trabalho1.aplication;
 
-import util.CurrencyConverter;
+import trabalho1.util.CurrencyConverter;
 
 import java.util.Locale;
 import java.util.Scanner;
