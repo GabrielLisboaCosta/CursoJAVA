@@ -17,13 +17,13 @@ public class Principal {
         teclado.nextLine();
         String nomeTitular = teclado.nextLine();
         System.out.print("Depósito inicial (s/n)? ");
-        String opcDeposito = teclado.next();
+        char opcDeposito = teclado.next().charAt(0);
 
-        if(opcDeposito.equals("s")){
+        if(opcDeposito == 's'){
             System.out.print("Digite o valor: ");
             double depInicial = teclado.nextDouble();
             conta1 = new ContaBancaria(nroConta, nomeTitular, depInicial);
-        } else if (opcDeposito.equals("n")) {
+        } else if (opcDeposito == 'n') {
             conta1 = new ContaBancaria(nroConta, nomeTitular);
         }
         System.out.println(conta1);

@@ -12,7 +12,7 @@ public class ContaBancaria {
     public ContaBancaria(int nroConta, String nomeTitular, double depInicial) {
         this.nroConta = nroConta;
         this.nomeTitular = nomeTitular;
-        this.saldo = depInicial;
+        deposito(depInicial);
     }
 
     public ContaBancaria(int nroConta, String nomeTitular) {
@@ -28,11 +28,27 @@ public class ContaBancaria {
         saldo -= (valor + 5);
     }
 
+    public int getNroConta() {
+        return nroConta;
+    }
+
+    public String getNomeTitular() {
+        return nomeTitular;
+    }
+
+    public void setNomeTitular(String nomeTitular) {
+        this.nomeTitular = nomeTitular;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
 
     @Override
     public String toString() {
         return "Conta= " + nroConta +
                 ", Titular= " + nomeTitular +
-                ", Saldo= R$" + saldo;
+                ", Saldo= R$" +
+                String.format("%.2f", saldo);
     }
 }
