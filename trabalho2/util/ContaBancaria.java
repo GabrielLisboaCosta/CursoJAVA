@@ -3,7 +3,7 @@ package trabalho2.util;
 public class ContaBancaria {
 
     private int nroConta;
-    String nomeTitular;
+    private String nomeTitular;
     private double saldo = 0;
 
     public ContaBancaria(){
