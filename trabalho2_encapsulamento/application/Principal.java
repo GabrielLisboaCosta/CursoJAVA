@@ -1,6 +1,6 @@
-package trabalho2.application;
+package trabalho2_encapsulamento.application;
 
-import trabalho2.util.ContaBancaria;
+import trabalho2_encapsulamento.util.ContaBancaria;
 
 import java.util.Locale;
 import java.util.Scanner;

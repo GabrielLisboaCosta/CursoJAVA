@@ -1,4 +1,4 @@
-package trabalho2.util;
+package trabalho2_encapsulamento.util;
 
 public class ContaBancaria {
 
