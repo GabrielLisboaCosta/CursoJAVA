@@ -66,6 +66,9 @@ public class Principal {
                 }
             }else{
                 System.out.println("ID inexistente!");
+                for (ListaConta listaGeral : func.getListaGeral()) {
+                    System.out.println(listaGeral);
+                }
             }
         }
     }
