@@ -2,18 +2,20 @@ package trabalho4_compisicao.entites;
 
 public class OrderItem {
     private int quantity;
-    private double price;
+    private double pricePed;
+    private Product prod;
 
     public OrderItem(){
     }
 
-    public OrderItem(int quantity, double price) {
+    public OrderItem(int quantity, Product prod) {
         this.quantity = quantity;
-        this.price = price;
+        this.prod = prod;
     }
 
     public double subTotal(){
-        return quantity*price;
+        pricePed = quantity*prod.getPrice();
+        return pricePed;
     }
 
     public int getQuantity() {
@@ -21,6 +23,10 @@ public class OrderItem {
     }
 
     public double getPrice() {
-        return price;
+        return pricePed;
+    }
+
+    public Product getProd() {
+        return prod;
     }
 }

@@ -7,7 +7,6 @@ public class Client {
     private String nome;
     private String email;
     private LocalDate birthDate;
-    DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     public Client(){
     }
     public Client(String nome, String email, String birthDate) {
