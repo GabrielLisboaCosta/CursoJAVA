@@ -1,4 +1,4 @@
-package trabalho13_JDBC_inserir.src.application;
+package trabalho14_JDBC_atualizar.src.application;
 
 import trabalho12_JDBC.src.db.DB;
 
@@ -22,7 +22,7 @@ public class Program {
                     Statement.RETURN_GENERATED_KEYS);
             st.setString(1, "Carl Purple");
             st.setString(2, "carl@gmail.com");
-            st.setDate(3, new java.sql.Date(sdf.parse("22/04/1985").getTime()));
+            st.setDate(3, new Date(sdf.parse("22/04/1985").getTime()));
             st.setDouble(4, 3000.0);
             st.setInt(5, 4);
 
