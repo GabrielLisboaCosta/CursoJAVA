@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ConexaoBD_JDBC/ConexaoBD_JDBC.iml" filepath="$PROJECT_DIR$/ConexaoBD_JDBC/ConexaoBD_JDBC.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/CursoJAVA.iml" filepath="$PROJECT_DIR$/.idea/CursoJAVA.iml" />
     </modules>
   </component>
