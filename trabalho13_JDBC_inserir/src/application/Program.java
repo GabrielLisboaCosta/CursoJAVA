@@ -1,6 +1,6 @@
-package trabalho12_JDBC.src.application;
+package trabalho13_JDBC_inserir.src.application;
 
-import trabalho12_JDBC.src.db.DB;
+import trabalho13_JDBC_inserir.src.db.DB;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
