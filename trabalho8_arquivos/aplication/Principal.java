@@ -1,6 +1,6 @@
 package trabalho8_arquivos.aplication;
 
-import trabalho8_arquivos.entites.Produto;
+import trabalho8_arquivos.entites.Employee;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -11,14 +11,14 @@ public class Principal {
     public static void main(String[] args){
         Locale.setDefault(Locale.US);
 
-        List<Produto> todosProd = new ArrayList<>();
+        List<Employee> todosProd = new ArrayList<>();
         String path = "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\curso\\prod.txt";
         System.out.println();
         try(BufferedReader br = new BufferedReader(new FileReader(path))){
             String line = br.readLine();
             while(line != null){
                 String[] prodVect = line.split(",");
-                Produto prod = new Produto(prodVect[0], Double.parseDouble(prodVect[1]), Integer.parseInt(prodVect[2]));
+                Employee prod = new Employee(prodVect[0], Double.parseDouble(prodVect[1]), Integer.parseInt(prodVect[2]));
                 todosProd.add(prod);
                 line = br.readLine();
             }
@@ -34,7 +34,7 @@ public class Principal {
 
         String pathNovo = "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\curso\\newPacth\\novosProd.txt";
         try(BufferedWriter bw = new BufferedWriter(new FileWriter(pathNovo))){
-            for(Produto produtin : todosProd){
+            for(Employee produtin : todosProd){
                 String line = (produtin.getNome() + "," + String.format("%.2f",produtin.getTotalPrice()));
                 bw.write(line);
                 bw.newLine();

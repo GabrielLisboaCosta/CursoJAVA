@@ -1,12 +1,12 @@
 package trabalho8_arquivos.entites;
 
-public class Produto {
+public class Employee {
     private String nome;
     private double price;
     private int quant;
     private double totalPrice;
 
-    public Produto(String nome, double price, int quant) {
+    public Employee(String nome, double price, int quant) {
         this.nome = nome;
         this.price = price;
         this.quant = quant;
