@@ -32,20 +32,22 @@ public class Program2 {
         System.out.println("Inserted! New Id = " + newDepartment.getId());
         */
 
+        /*
         System.out.println("\n>>>> Test 4: department update <<<<");
         department = departmentDao.findById(1);
         department.setName("Food");
         departmentDao.update(department);
         System.out.println("Uptade completed!");
+         */
 
+        /*
         System.out.println("\n>>>> Test 5: department delete <<<<");
         System.out.print("Qual ID deseja apagar: ");
         int id = sc.nextInt();
         departmentDao.deleteById(id);
         System.out.println("Delete completed");
-
-
-
+         */
+        
         sc.close();
     }
 }
