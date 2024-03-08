@@ -3,9 +3,15 @@ package trabalho16_JDBC_projetoDAO.src.model.dao.impl;
 import trabalho16_JDBC_projetoDAO.src.model.dao.DepartmentDao;
 import trabalho16_JDBC_projetoDAO.src.model.entites.Department;
 
+import java.sql.Connection;
 import java.util.List;
 
 public class DepartmentDaoJDBC implements DepartmentDao {
+    private Connection conn;
+    public DepartmentDaoJDBC(Connection conn) {
+        this.conn = conn;
+    }
+
     @Override
     public void insert(Department obj) {
 
