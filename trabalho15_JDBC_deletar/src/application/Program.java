@@ -1,6 +1,7 @@
-package trabalho14_JDBC_atualizar.src.application;
+package trabalho15_JDBC_deletar.src.application;
 
 import trabalho12_JDBC.src.db.DB;
+import trabalho15_JDBC_deletar.src.db.DbIntegrityException;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,18 +15,17 @@ public class Program {
         try{
             conn = DB.getConnection();
             st = conn.prepareStatement(
-                 "UPDATE seller "
-                         + "SET BaseSalary = BaseSalary + ? "
-                    + "WHERE "
-                    + "(DepartmentId = ?)");
-            st.setDouble(1, 200.00);
-            st.setInt(2, 2);
+                 "DELETE FROM department "
+                         + "WHERE "
+                         + "Id = ?");
+
+            st.setInt(1, 5);
 
             int rowsAffected = st.executeUpdate();
             System.out.println("Done! Rows affected: " + rowsAffected);
         }
         catch (SQLException e){
-            e.printStackTrace();
+            throw new DbIntegrityException(e.getMessage());
         }
         finally {
             DB.closeStatement(st);
